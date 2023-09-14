@@ -1,6 +1,5 @@
 import {
   IUserCredentials,
-  IOnpremiseUserCredentials,
   IOnpremiseFbaCredentials,
   IOnPremiseAddinCredentials,
   IOnlineAddinCredentials,
@@ -19,22 +18,6 @@ export const onlineCreds: IUserCredentials = {
 
 export const onlineWithAdfsCreds: IUserCredentials = {
   username: '[username]',
-  password: '[password]'
-};
-
-export const onpremCreds: IOnpremiseUserCredentials = {
-  username: '[username]',
-  domain: '[domain]',
-  password: '[password]'
-};
-
-export const onpremUpnCreds: IOnpremiseUserCredentials = {
-  username: '[user@domain.com]',
-  password: '[password]'
-};
-
-export const onpremUserWithDomainCreds: IOnpremiseUserCredentials = {
-  username: '[domain\\user]',
   password: '[password]'
 };
 

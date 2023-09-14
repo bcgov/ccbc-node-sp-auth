@@ -30,12 +30,6 @@ export interface IOnpremiseFbaCredentials extends IUserCredentials {
   fba: boolean;
 }
 
-export interface IOnpremiseUserCredentials extends IUserCredentials {
-  domain?: string;
-  workstation?: string;
-  rejectUnauthorized?: boolean;
-}
-
 export interface IAdfsUserCredentials extends IUserCredentials {
   domain?: string;
   adfsCookie?: string;
@@ -55,7 +49,6 @@ export type IAuthOptions =
   IOnlineAddinCredentials
   | IOnPremiseAddinCredentials
   | IUserCredentials
-  | IOnpremiseUserCredentials
   | IAdfsUserCredentials
   | IOnDemandCredentials;
 
@@ -81,20 +74,6 @@ export function isUserCredentialsOnline(siteUrl: string, T: IAuthOptions): T is 
   const isOnPrem: boolean = isOnPremUrl(siteUrl);
 
   if (!isOnPrem && (T as IUserCredentials).username !== undefined && !isAdfsCredentials(T)) {
-    return true;
-  }
-
-  return false;
-}
-
-export function isUserCredentialsOnpremise(siteUrl: string, T: IAuthOptions): T is IOnpremiseUserCredentials {
-  if ((T as IUserCredentials).online) {
-    return false;
-  }
-
-  const isOnPrem: boolean = isOnPremUrl(siteUrl);
-
-  if (isOnPrem && (T as IUserCredentials).username !== undefined && !isAdfsCredentials(T)) {
     return true;
   }
 
