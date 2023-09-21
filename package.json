@@ -13,10 +13,6 @@
     "oauth",
     "adfs"
   ],
-  "bugs": {
-    "url": "https://github.com/s-KaiNet/node-sp-auth/issues"
-  },
-  "homepage": "https://github.com/s-KaiNet/node-sp-auth",
   "scripts": {
     "build": "tsc -p . && npm run copy",
     "copy": "cpy src/auth/resolvers/ondemand/electron/*.* lib/src/auth/resolvers/ondemand/electron",
