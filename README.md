@@ -13,11 +13,6 @@ Versions supported:
  * SharePoint Online
 
 Authentication options:
- * SharePoint 2013 and onwards:
-   * Addin only permissions
-   * User credentials through the http ntlm handshake
-   * Form-based authentication (FBA)
-   * Forefront TMG authentication
  * SharePoint Online:
    * Addin only permissions
    * SAML based with user credentials
@@ -68,16 +63,6 @@ Promise resolving into object with following properties:
  - `credentialOptions` - optional, object in a form of key-value. Each authentication option requires predefined credential object, depending on authentication type. Based on credentials provided, `node-sp-auth` automatically determines which authentication strategy to use (strategies listed in the top of the readme file).  
  
 Possible values for `credentialOptions` (depending on authentication strategy):
-
- - SharePoint on premise (2013, 2016):
-    - [Addin only permissions:](https://github.com/s-KaiNet/node-sp-auth/wiki/SharePoint%20on-premise%20addin%20only%20authentication)  
-      `clientId`, `issuerId`, `realm`, `rsaPrivateKeyPath`, `shaThumbprint`
-    - [User credentials through the http ntlm handshake:](https://github.com/s-KaiNet/node-sp-auth/wiki/SharePoint%20on-premise%20user%20credentials%20authentication)  
-      `username`, `password`, `domain`, `workstation`
-    - [User credentials for form-based authentication (FBA):](https://github.com/s-KaiNet/node-sp-auth/wiki/SharePoint%20on-premise%20FBA%20authentication)  
-      `username`, `password`, `fba` = true
-    - User credentials for Forefront TMG (reverse proxy):  
-      `username`, `password`, `tmg` = true
 
  - SharePoint Online: 
    - [Addin only permissions:](https://github.com/s-KaiNet/node-sp-auth/wiki/SharePoint%20Online%20addin%20only%20authentication)  
