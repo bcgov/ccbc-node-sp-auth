@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "@bcgov/ccbc-node-sp-auth",
+  "name": "ccbc-node-sp-auth",
   "author": "Rafael Solorzano, forked from (https://github.com/s-KaiNet)",
   "description": "Unattended SharePoint http authentication with nodejs",
   "main": "./lib/src/index.js",
