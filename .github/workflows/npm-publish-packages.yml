@@ -16,7 +16,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          scope: '@bcgov-ccbc'
       # Publish to npm
       - run: npm publish --access public
         env:
